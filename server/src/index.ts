@@ -3,6 +3,7 @@ import helmet from 'helmet';
 import dotenv from 'dotenv';
 dotenv.config();
 import sequelize from './db';
+import * as models from './models';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -14,6 +15,11 @@ const start = async () => {
 
     sequelize.authenticate();
     sequelize.sync();
+
+    models.User;
+    models.Cart;
+    models.Product;
+
     app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
   } catch (error) {
     console.log(error);
