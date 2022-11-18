@@ -1,13 +1,9 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import * as userController from '../controllers/user.controller';
 
 const router = Router();
 
-router.post('/registration', (req: Request, res: Response) => {
-  res.json(req.body);
-});
-
-router.post('/login', (req: Request, res: Response) => {
-  res.json('login');
-});
+router.post('/registration', userController.registration);
+router.post('/login', userController.login);
 
 export default router;

@@ -1,17 +1,10 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import * as productController from '../controllers/product.controller';
 
 const router = Router();
 
-router.post('/', (req: Request, res: Response) => {
-  res.json('create');
-});
-
-router.get('/', (req: Request, res: Response) => {
-  res.json('getAll');
-});
-
-router.get('/:id', (req: Request, res: Response) => {
-  res.json('getById ' + req.params.id);
-});
+router.post('/', productController.create);
+router.get('/', productController.getAll);
+router.get('/:id', productController.getOne);
 
 export default router;
