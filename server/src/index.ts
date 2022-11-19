@@ -1,12 +1,13 @@
 import express from 'express';
 import helmet from 'helmet';
-import dotenv from 'dotenv';
-dotenv.config();
-import sequelize from './db';
+import sequelize from './configs/db.config';
 import * as models from './models';
 import router from './routes';
 import notFoundMiddleware from './middleware/notFound.middleware';
 import errorHandlerMiddleware from './middleware/errorHandler.middleware';
+import setEnv from './configs/env.config';
+
+setEnv(process.env.NODE_ENV);
 
 const PORT = process.env.PORT || 3000;
 const app = express();
