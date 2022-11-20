@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { HttpError } from '../exceptions/httpError';
+import { HttpError } from '../utils/httpError';
 import { Product } from '../models';
 
 export const create = async (
