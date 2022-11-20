@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { HttpError } from '../exceptions/httpError';
+import { HttpError } from '../utils/httpError';
 
 export default (req: Request, res: Response, next: NextFunction) => {
   const fullPath = req.originalUrl;

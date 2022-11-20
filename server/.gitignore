@@ -1,6 +1,8 @@
 # Custom
 pgdata
 *.rest
+*.log.txt
+*.logs.txt
 
 # Logs
 logs
