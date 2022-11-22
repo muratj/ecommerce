@@ -12,9 +12,9 @@ export const User = sequelize.define('user', {
   },
   password: {
     type: DataTypes.STRING,
-    validate: {
-      is: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
-    },
+    // validate: {
+    //   is: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+    // },
   },
   role: {
     type: DataTypes.STRING,
