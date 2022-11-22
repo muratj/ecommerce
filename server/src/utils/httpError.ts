@@ -1,11 +1,13 @@
 export class HttpError extends Error {
   status: number;
   message: string;
+  type?: string;
 
-  constructor(status: number, message: string) {
+  constructor(status: number, message: string, type?: string) {
     super();
     this.status = status;
     this.message = message;
+    this.type = type;
   }
 
   static badRequest(message: string) {
